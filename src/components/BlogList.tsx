@@ -1,4 +1,4 @@
-import { Blog } from "../types/blog"
+import type { Blog } from "../types/blog"
 import BlogCard from "./BlogCard"
 
 interface Props {

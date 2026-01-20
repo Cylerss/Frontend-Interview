@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Blog } from "../types/blog"
+import type { Blog } from "../types/blog"
 
 const api = axios.create({
   baseURL: "http://localhost:3001",

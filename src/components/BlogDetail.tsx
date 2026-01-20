@@ -5,6 +5,7 @@ export default function BlogDetail({ blog }: { blog: { id: string } }) {
   const { data, isLoading } = useQuery({
     queryKey: ["blog", blog.id],
     queryFn: () => getBlogById(blog.id),
+    staleTime: 5 * 60 * 1000,
   })
 
   if (isLoading || !data) return <p>Loading...</p>
@@ -22,5 +23,4 @@ export default function BlogDetail({ blog }: { blog: { id: string } }) {
       </p>
     </div>
   )
-
 }
